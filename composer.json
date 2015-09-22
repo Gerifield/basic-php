@@ -15,7 +15,11 @@
         "psr-4": {
             "Gerifield\\": "src/Gerifield/",
             "Controller\\": "Controller/",
+            "UnitTest\\": "test/UnitTest/",
             "": "."
         }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^4.8"
     }
 }
