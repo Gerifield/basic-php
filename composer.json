@@ -1,0 +1,14 @@
+{
+    "name": "gerifield/basic-php",
+    "description": "Basic PHP framework",
+    "authors": [
+        {
+            "name": "gerifield",
+            "email": "radics.gergely@ustream.tv"
+        }
+    ],
+    "require": {
+        "altorouter/altorouter": "^1.1",
+        "twig/twig": "^1.22"
+    }
+}
