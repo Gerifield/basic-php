@@ -69,6 +69,18 @@ abstract class BaseController
 		}
 	}
 
+	public function jsonSuccess($result = array())
+	{
+		$result['success'] = true;
+		$this->json($result);
+	}
+	
+	public function jsonFailure($result = array())
+	{
+		$result['success'] = false;
+		$this->json($result);
+	}
+
 	public function json($result = array())
 	{
 		header('Content-Type: text/html; charset=utf-8');
