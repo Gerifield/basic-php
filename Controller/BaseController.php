@@ -74,7 +74,7 @@ abstract class BaseController
 		$result['success'] = true;
 		$this->json($result);
 	}
-	
+
 	public function jsonFailure($result = array())
 	{
 		$result['success'] = false;
