@@ -19,8 +19,16 @@ if ($match) {
 
 		//Create and call controller
 		$controller = 'Controller\\'.$route[0];
+		if (!class_exists($controller)) {
+			throw new Exception('Controller not found');
+		}
+
 		$controller = new $controller($router);
 		$method     = $route[1];
+		if (!method_exists($controller, $method)) {
+			throw new Exception('Method not found');
+		}
+
 		call_user_func_array( array($controller, $method), $match['params'] );
 
 	} else if (is_callable($match['target'])) {
