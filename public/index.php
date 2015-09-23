@@ -13,6 +13,10 @@ if ($match) {
 	if (strstr($match['target'], '@')) {
 		$route = explode('@', $match['target']);
 
+		if (count($route) < 2) {
+			throw new Exception('Wrong route definition');
+		}
+
 		//Create and call controller
 		$controller = 'Controller\\'.$route[0];
 		$controller = new $controller($router);
